@@ -239,7 +239,7 @@ class ThemeBase:
         method = request.cfg.backlink_method(request)
         if method == 'backlink':
             link_title = _('Click to do a full-text search for this title')
-            link_query = dict(action='fullsearch', value='linkto:"%s"' % page_name, context='180')
+            link_query = dict(action='fullsearch', value='%s' % page_name, context='180')
             link = page.link_to(request, link_text, querystr=link_query, title=link_title,
                                 css_class='backlink', rel='nofollow')
         elif method == 'pagelink':
